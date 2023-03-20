@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto:wght@700&display=swap");
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2F4j41j90o54a31.png&f=1&nofb=1&ipt=1bd37e9f18301e6653bee77f1d2b928fdc7fed682cd42f4f46d29d8dc60ca243&ipo=images");
+  background-color: #6b62dc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  /* Style for the scrollbar */
+  /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+
+  /* For Safari and other web browsers */
+  width: 10px;
+}
+
+/* Style for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Style for the scrollbar track */
+::-webkit-scrollbar-track {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2F4j41j90o54a31.png&f=1&nofb=1&ipt=1bd37e9f18301e6653bee77f1d2b928fdc7fed682cd42f4f46d29d8dc60ca243&ipo=images");
+}
+
+/* Style for the scrollbar thumb and track in Firefox */
+/* Change the colors as desired */
+::-moz-scrollbar {
+  width: 10px;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
+::-moz-scrollbar-track {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2F4j41j90o54a31.png&f=1&nofb=1&ipt=1bd37e9f18301e6653bee77f1d2b928fdc7fed682cd42f4f46d29d8dc60ca243&ipo=images");
+}
+.top-wrapper {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(0vw, -10vw);
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(0vw, -10vw);
+}
+
+.grid-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(100px, auto));
+  grid-gap: 3.5rem;
+}
+
+.grid-item {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.video-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.image-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.download {
+  float: right;
+  outline: none;
+  border: none;
+  color: white;
+  font-family: "Roboto", monospace;
+  font-size: 20px;
+  cursor: pointer;
+  background-image: url("../assets/download.png");
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+  transform: translateY(-0.25vw);
+}
+
+.share {
+  float: left;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-image: url("../assets/share.png");
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  transform: translate(0px, -5px);
+}
+
+.video-container {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+}
+
+.video-name {
+  font-size: 25px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  transform: translateY(-1vw);
+  font-family: "Roboto", monospace;
+  text-shadow: 0px 1px 5px black;
+}
+
+.image-name {
+  font-size: 25px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  transform: translateY(-1vw);
+  font-family: "Roboto", monospace;
+  text-shadow: 0px 1px 5px black;
+}
+
+.misc-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.misc-wrapper.show {
+  transform: translateY(0);
+}
+
+.link-wrapper {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(-0.75vw, -4vw);
+}
+
+.link-wrapper ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.link-wrapper li {
+  display: inline-block;
+  margin-right: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+#links {
+  text-decoration: none;
+  font-family: "Roboto", monospace;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 3px 5px black;
+}
+
+#alert {
+  color: white;
+  font-family: "Roboto", monospace;
+  font-size: 15px;
+  padding: 20px;
+  text-shadow: 0px 1px 5px black;
+}
+
+#shroom_image {
+  margin: 0 auto;
+  transform: translate(0vw, 5vw);
+  width: 50vw;
+  height: 25vw;
+}
+
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2F4j41j90o54a31.png&f=1&nofb=1&ipt=1bd37e9f18301e6653bee77f1d2b928fdc7fed682cd42f4f46d29d8dc60ca243&ipo=images");
+    background-color: #6b62dc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  .grid-item {
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    border-radius: 15px;
+  }
+
+  .download {
+    float: right;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: "Roboto", monospace;
+    font-size: 20px;
+    cursor: pointer;
+    background-image: url("../assets/download.png");
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    transform: translateY(-5px);
+  }
+
+  .share {
+    float: left;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-image: url("../assets/share.png");
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    transform: translate(0px, -5px);
+  }
+
+  .video-name {
+    font-size: 27.5px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    transform: translateY(-4.5vw);
+    font-family: "Roboto", monospace;
+    text-shadow: 0px 1px 5px black;
+  }
+
+  .image-name {
+    font-size: 27.5px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    transform: translateY(-4.5vw);
+    font-family: "Roboto", monospace;
+    text-shadow: 0px 1px 5px black;
+  }
+
+  #shroom_image {
+    margin: 0 auto;
+    transform: translate(0vw, 5vw);
+    width: 85vw;
+    height: 55vw;
+  }
+  .top-wrapper {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(0vw, -10vw);
+  }
+
+  .link-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(-3vw, -15vw);
+  }
+
+  .link-wrapper ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .link-wrapper li {
+    display: inline-block;
+    margin-right: 15px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #links {
+    text-decoration: none;
+    font-family: "Roboto", monospace;
+    color: white;
+    font-size: 15px;
+    text-shadow: 1px 3px 5px black;
+  }
+}
+
+@media only screen and (max-width: 414px) and (max-height: 896px) {
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2F4j41j90o54a31.png&f=1&nofb=1&ipt=1bd37e9f18301e6653bee77f1d2b928fdc7fed682cd42f4f46d29d8dc60ca243&ipo=images");
+    background-color: #6b62dc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  .grid-item {
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    border-radius: 15px;
+  }
+
+  .download {
+    float: right;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: "Roboto", monospace;
+    font-size: 20px;
+    cursor: pointer;
+    background-image: url("../assets/download.png");
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    transform: translateY(-5px);
+  }
+
+  .share {
+    float: left;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-image: url("../assets/share.png");
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    transform: translate(0px, -5px);
+  }
+
+  .video-name {
+    font-size: 27.5px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    transform: translateY(-4.5vw);
+    font-family: "Roboto", monospace;
+    text-shadow: 0px 1px 5px black;
+  }
+
+  .image-name {
+    font-size: 27.5px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    transform: translateY(-4.5vw);
+    font-family: "Roboto", monospace;
+    text-shadow: 0px 1px 5px black;
+  }
+
+  #shroom_image {
+    margin: 0 auto;
+    transform: translate(0vw, 5vw);
+    width: 85vw;
+    height: 55vw;
+  }
+  .top-wrapper {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(0vw, -10vw);
+  }
+
+  .link-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(-3vw, -15vw);
+  }
+
+  .link-wrapper ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .link-wrapper li {
+    display: inline-block;
+    margin-right: 15px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #links {
+    text-decoration: none;
+    font-family: "Roboto", monospace;
+    color: white;
+    font-size: 15px;
+    text-shadow: 1px 3px 5px black;
+  }
+}
